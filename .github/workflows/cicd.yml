@@ -17,7 +17,7 @@ jobs:
         java-version: "17"
     - name: Build with Maven
       run: mvn -B package
-    - name: Login to DockerHub
+    - name: Login to DockerHub #change with my docker cred
       uses: docker/login-action@v3
       with:
         username: ${{secrets.DOCKERHUB_USERNAME}}
