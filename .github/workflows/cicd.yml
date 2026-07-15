@@ -26,7 +26,7 @@ jobs:
       run: docker build -t ${{secrets.DOCKERHUB_USERNAME}}/java-docker-app:latest .
     - name: Push Docker Image to DockerHub
       run: docker push ${{secrets.DOCKERHUB_USERNAME}}/java-docker-app:latest
-    - name: Deploy Container to EC2 (via SSH)
+    - name: Deploy Container to EC2 (via SSH)  #added my server details here.
       uses: appleboy/ssh-action@v1.1.0
       with:
         host: ${{secrets.EC2_HOST}}
